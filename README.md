@@ -1,2 +1,2 @@
 # youtube clone
-This clone of youtube is just an academic exercise to improve skills in HTML, CSS and JavaScript and learning new things about them.
+This clone of youtube is done for study purposes only, looking for to improve skills in HTML, CSS and JavaScript.
