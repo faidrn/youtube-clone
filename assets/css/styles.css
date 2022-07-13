@@ -2,6 +2,10 @@
 	--borders-color: #EAECEE;
 }
 
+*{
+	font-family: 'Anton', sans-serif;
+}
+
 .header{
 	width: 100%;
 	height: 9vh;
