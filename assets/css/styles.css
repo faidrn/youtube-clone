@@ -1,5 +1,9 @@
 :root{
 	--borders-color: #EAECEE;
+	--borders-dark-color: #D5D8DC;
+	--height-icons: 3vw;
+	--width-icons: 3vw;
+	--search-text-color: hsl(0, 0%, 6.7%);
 }
 
 *{
@@ -68,8 +72,10 @@
 	
 	position: relative = el elemento permanecera en el ffluo natural de la pagina. Actuara como un punto de anclae para los bloques absolutamente posicionados.
 	*/
-	height: 3vw;
-	width: 3vw;
+	/*height: 3vw;
+	width: 3vw;*/
+	height: var(--height-icons);
+	width: var(--width-icons);
 	padding-right: 1vw;
 	box-sizing: border-box;
 	display: inline-block;
@@ -88,4 +94,85 @@
 .youtube-logo p{
 	font-family: 'Anton', sans-serif;
 	font-size: 21px;
+}
+
+.search-container{
+	/*
+	flex = es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
+	flex: flex-grow flex-shrin flex-basis;
+	
+	flex-grow = define la habilidad de crecer para un elemento flex, si es necesario
+	flex-shhrink = define la habilidad de un elemento flex de encongerse, si es necesario
+	flex-basis = Esto define el tamaño predeterminado de un elemento antes de que se distribuya el espacio restante.
+	*/
+	flex: 0 1 54vw;
+	min-width: 0px;
+	height: 9vh;
+	border: 1px solid red;
+}
+
+.search-bar{
+	height: 9vh;
+	/*margin: 0 0 0 3.5vw;*/
+    padding: 0 4px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex: 1;
+    flex-basis: 1e-9px;
+	border: 1px solid;
+}
+
+.search-box{
+	height: 5vh;
+	text-align: center;
+	border: 1px solid var(--borders-dark-color);
+	border-right: none;
+	border-radius: 2px 0 0 2px;
+	box-shadow: inset 0 1px 2px #eee;
+	color: black;
+	padding: 2px 6px;
+	margin-left: 22px;
+    flex: 1;
+    flex-basis: 1e-9px;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-search{
+	height: 1.5vw;
+	width: 1.5vw;
+	/*transform: translateY(4px);*/
+	margin-top: 4px;
+}
+
+.icon-content{
+	/*display: none;
+	position: absolute;*/
+	left: 0;
+	padding: 0 10px;
+	color: #030303;
+}
+
+.input-search{
+	box-sizing: border-box;
+	padding: 1px 0;
+	font-size: 16px;
+	font-weight: 400;
+	width: 100%;
+	line-height: 24px;
+	border: none;
+	box-shadow: none;
+	color: var(--search-text-color);
+}
+
+.icon-clear{
+	height: 1vw;
+	width: 1vw;
+	/*transform: translateY(7px);*/
+	margin-top: 7px;
+}
+
+.button-search{
+	border: 1px solid #d3d3d3;
 }

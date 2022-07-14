@@ -35,26 +35,39 @@
 					</div>
 				</div>
 
-				<div class="search-bar">
-					<form>
-						<input type="text" placeholder="Buscar" />
-						<button>
+				<div class="search-container">
+					<form class="search-bar">
+						<div class="search-box">
+							<span class="icon-content">
+								<img src="./assets/icons/search_icon.svg" alt="icono buscar" class="icon icon-search" />
+							</span>
+							
+							<input type="text" placeholder="Buscar" class="input-search" onFocus="mmostrarIcono()" onKeyPress="mostrarIconoLimpiarInput()" />
+							
+							<span class="icon-content cursor-pointer" onClick="clarInput()">
+								<img src="./assets/icons/close1.svg" alt="icono de limpiar busqueda" class="icon icon-clear" />
+							</span>
+						</div>
+						
+						<button class="cursor-pointer button-search">
 							<img src="./assets/icons/search_icon.svg" alt="Buscar" title="Buscar" class="icon" />
 						</button>
-						<div class="microphhone-icon">
-							<img src="./assets/icons/microphone_icon.svg" alt="Busqueda por voz" title="Haz b&uacute;squeda por voz" class="icon" />
+						
+						<div class="microphhone-icon cursor-pointer">
+							<img src="./assets/icons/microphone_icon.svg" alt="Busqueda por voz" title="Haz b&uacute;squeda por voz" class="icon icon-clear" />
 						</div>
-					</form>
+					</form>					
+					
 				</div>
 
 				<div class="administration-options">
-					<img src="./assets/icons/add_video_icon.svg" alt="Crear" title="Crear" class="icon" />
-					<img src="./assets/icons/menu_desktop_icon.svg" alt="Aplicaciones de YouTube" title="Aplicaciones de YouTube" class="icon" />
-					<div class="notifications-icon">
+					<img src="./assets/icons/add_video_icon.svg" alt="Crear" title="Crear" class="icon cursor-pointer" />
+					<img src="./assets/icons/menu_desktop_icon.svg" alt="Aplicaciones de YouTube" title="Aplicaciones de YouTube" class="icon cursor-pointer" />
+					<div class="notifications-icon cursor-pointer">
 						<img src="./assets/icons/bell_icon.svg" alt="Notificaciones" title="Notificaciones"  class="icon"/>
 						<div class="notiications-number"></div>
 					</div>
-					<div class="picture-account">
+					<div class="picture-account cursor-pointer">
 						<img src="./assets/img/avatar1.svg" alt="Perfil de usuario" class="icon" />
 					</div>
 				</div>
