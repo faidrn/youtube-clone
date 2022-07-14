@@ -3,5 +3,7 @@ This clone of youtube is done for study purposes only, looking for to improve sk
 
 # Iconos
 https://icomoon.io/
+
 https://fontawesome.com/
+
 https://ionic.io/ionicons
