@@ -3,23 +3,89 @@
 }
 
 *{
-	font-family: 'Anton', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.cursor-pointer{
+	cursor: pointer;
+}
+
+/*MAIN STRUCTURE*/
+.container{
+	background: transparent;
 }
 
 .header{
+	/*
+	position: fixed = el elemento no permanecera en el flujo natural de la pagina. se posicionara a si mismo de acuerdo al viewport. Debido a que está posicionado, actuará como un punto de anclaje para el siguiente elemento absolutamente posicionado.
+	
+	z-index = deffine el orden de los elementos en el eje Z, solo funciona en elementos posicionados (cualquiera q no sea stactic). Si el valor es positivo el elemento es movido en frente de los demas elementos, de lo contrario es movido detras del resto de elementos
+*/
+	position: fixed;
 	width: 100%;
 	height: 9vh;
 	border: 1px solid var(--borders-color);
+	z-index: 1;
+	transform: translateY(0);
 }
 
 .nav-bar{
+	height: 9vh;
+	padding: 0 1.7vw;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 }
 
-.menu-icon{
-	height: 1vw;
-	width: 1.5vw;
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.menus-bar{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.icon-menu{
+	/*
+	box-sizing = define como se calcula el ancho y alto de un elemento, ya sea q incluyan o no el padding y los borders. 
+	border-box = El ancho y alto del elemento aplica a todas las partes del elemento: el contenido, el padding y los borders
+	
+	Display = establece como se va a visualizar el elemento. 
+	inline-block = comparte las propiedades inline y block del elemento. inline xq el elemento se comporta como texto simple y se inserta en un bbloqque de texto; block porque se le puede aplicar un alto y un ancho.
+	
+	position: relative = el elemento permanecera en el ffluo natural de la pagina. Actuara como un punto de anclae para los bloques absolutamente posicionados.
+	*/
+	height: 3vw;
+	width: 3vw;
+	padding-right: 1vw;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+}
+
+.youtube-logo{
+	width: 7.7vw;
+	height: 9vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.youtube-logo p{
+	font-family: 'Anton', sans-serif;
+	font-size: 21px;
 }
