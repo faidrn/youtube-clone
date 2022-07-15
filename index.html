@@ -26,7 +26,7 @@
 	<div class="container">
 		<header class="header">
 			<nav class="nav-bar">
-				<div class="menus-bar">
+				<div class="navbar-left">
 					<!--<img src="./assets/icons/menu-outline.svg" alt="Menus" class="icon icon-menu" />-->
 					<svg class="icon icon-menu cursor-pointer"><use xlink:href="#icon-menu"></use></svg>
 					<div class="youtube-logo cursor-pointer">
@@ -35,7 +35,7 @@
 					</div>
 				</div>
 
-				<div class="search-container">
+				<div class="navbar-center">
 					<form class="search-bar">
 						<div class="search-box">
 							<span class="icon-content">
@@ -50,25 +50,32 @@
 						</div>
 						
 						<button class="cursor-pointer button-search">
-							<img src="./assets/icons/search_icon.svg" alt="Buscar" title="Buscar" class="icon" />
+							<img src="./assets/icons/search_icon.svg" alt="Buscar" title="Buscar" class="icon icon-search icon-search-2" />
 						</button>
 						
-						<div class="microphhone-icon cursor-pointer">
-							<img src="./assets/icons/microphone_icon.svg" alt="Busqueda por voz" title="Haz b&uacute;squeda por voz" class="icon icon-clear" />
+						<div class="add-voice-container cursor-pointer circles">
+							<img src="./assets/icons/microphone_icon.svg" alt="Busqueda por voz" title="Haz b&uacute;squeda por voz" class="icon icon-microphone" />
 						</div>
 					</form>					
 					
 				</div>
 
-				<div class="administration-options">
+				<div class="navbar-right">
 					<img src="./assets/icons/add_video_icon.svg" alt="Crear" title="Crear" class="icon cursor-pointer" />
-					<img src="./assets/icons/menu_desktop_icon.svg" alt="Aplicaciones de YouTube" title="Aplicaciones de YouTube" class="icon cursor-pointer" />
-					<div class="notifications-icon cursor-pointer">
-						<img src="./assets/icons/bell_icon.svg" alt="Notificaciones" title="Notificaciones"  class="icon"/>
-						<div class="notiications-number"></div>
+					<!--<img src="./assets/icons/menu_desktop_icon.svg" alt="Aplicaciones de YouTube" title="Aplicaciones de YouTube" class="icon cursor-pointer" />-->
+					<div class="notifications cursor-pointer circles">
+						
+						<!--<div class="container-notifications-icon">-->
+							<img src="./assets/icons/bell_icon.svg" alt="Notificaciones" title="Notificaciones"  class="icon icon-search icon-notifications"/>
+						<!--</div>-->
+						
+						<div class="notifications-number">
+							<!--<p>9+</p>-->
+							9+
+						</div>
 					</div>
-					<div class="picture-account cursor-pointer">
-						<img src="./assets/img/avatar1.svg" alt="Perfil de usuario" class="icon" />
+					<div class="picture-user cursor-pointer circles">
+						<img src="./assets/img/avatar1.svg" alt="Perfil de usuario" class="icon user-profile" />
 					</div>
 				</div>
 			</nav>

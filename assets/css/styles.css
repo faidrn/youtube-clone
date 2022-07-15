@@ -4,6 +4,8 @@
 	--height-icons: 3vw;
 	--width-icons: 3vw;
 	--search-text-color: hsl(0, 0%, 6.7%);
+	--height-circles: 2.7vw;
+	--width-circles: 2.7vw;
 }
 
 *{
@@ -55,7 +57,7 @@
   fill: currentColor;
 }
 
-.menus-bar{
+.navbar-left{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -96,7 +98,7 @@
 	font-size: 21px;
 }
 
-.search-container{
+.navbar-center{
 	/*
 	flex = es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
 	flex: flex-grow flex-shrin flex-basis;
@@ -175,4 +177,85 @@
 
 .button-search{
 	border: 1px solid #d3d3d3;
+	background-color: #f8f8f8;
+    border-radius: 0 2px 2px 0;
+    margin: 0;
+}
+
+.icon-search-2{
+	height: 1.8vw;
+	width: 3vw;
+}
+
+.circles{
+	height: var(--height-circles);
+	width: var(--width-circles);
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-voice-container{	
+	background: #f9f9f9;
+	margin-left: 4px;
+}
+
+.icon-microphone{
+	height: 2vw;
+	width: 1.1vw;
+}
+
+.navbar-right{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.notifications{
+	background: white;
+	border: 1px solid;
+}
+
+/*.container-notifications-icon{}*/
+
+.icon-notifications{
+	position: relative;
+	transform: translateX(0.6vw);
+}
+
+.notifications-number{
+	height: 1.2vw;
+	width: 1.6vw;
+	background: #c00;
+	border-radius: 25px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	/*display: flex;
+	align-items: center;
+	justify-content: center;*/
+	/*transform: translateX(0vw)
+		translateY(-0.2vw) 
+		translateZ(1vw);*/
+/*}
+
+.notifications-number p{*/
+	color: white;
+	font-size: 2vh;
+	font-weight: 100;
+	/*margin: 0;
+	text-align: center;*/
+}
+
+.picture-user{
+	background: white;
+	overflow: hidden;
+	/*margin-left: 4px;*/
+}
+
+.user-profile{
+	width: 3vw;
+	height: 3vw;
 }
