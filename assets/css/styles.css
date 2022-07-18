@@ -4,20 +4,25 @@
 	--height-icons: 3vw;
 	--width-icons: 3vw;
 	--search-text-color: hsl(0, 0%, 6.7%);
-	--height-circles: 2.7vw;
-	--width-circles: 2.7vw;
+	--height-circles: 3vw;
+	--width-circles: 3vw;
 }
 
 *{
 	font-family: 'Roboto', sans-serif;
 }
 
-.absolute{
-	position: absolute;
-}
-
 .cursor-pointer{
 	cursor: pointer;
+}
+
+.mobile-hidden{
+	/* display: inline-block; */
+}
+
+.desktop-hidden, 
+.hide{
+	display: none;
 }
 
 /*MAIN STRUCTURE*/
@@ -27,9 +32,13 @@
 
 .header{
 	/*
-	position: fixed = el elemento no permanecera en el flujo natural de la pagina. se posicionara a si mismo de acuerdo al viewport. Debido a que está posicionado, actuará como un punto de anclaje para el siguiente elemento absolutamente posicionado.
+	position: fixed = el elemento no permanecera en el flujo natural de la pagina. se posicionara a si mismo de 
+	acuerdo al viewport. Debido a que está posicionado, actuará como un punto de anclaje para el siguiente elemento 
+	absolutamente posicionado.
 	
-	z-index = deffine el orden de los elementos en el eje Z, solo funciona en elementos posicionados (cualquiera q no sea stactic). Si el valor es positivo el elemento es movido en frente de los demas elementos, de lo contrario es movido detras del resto de elementos
+	z-index = deffine el orden de los elementos en el eje Z, solo funciona en elementos posicionados (cualquiera q 
+	no sea stactic). Si el valor es positivo el elemento es movido en frente de los demas elementos, de lo contrario 
+	es movido detras del resto de elementos
 */
 	position: fixed;
 	width: 100%;
@@ -64,15 +73,23 @@
 	justify-content: space-between;
 }
 
+.navbar-left a{
+	text-decoration: none;
+	color: #030303;
+}
 .icon-menu{
 	/*
-	box-sizing = define como se calcula el ancho y alto de un elemento, ya sea q incluyan o no el padding y los borders. 
-	border-box = El ancho y alto del elemento aplica a todas las partes del elemento: el contenido, el padding y los borders
+	box-sizing = define como se calcula el ancho y alto de un elemento, ya sea q incluyan o no el padding y los 
+	borders. 
+	border-box = El ancho y alto del elemento aplica a todas las partes del elemento: el contenido, el padding y 
+	los borders
 	
 	Display = establece como se va a visualizar el elemento. 
-	inline-block = comparte las propiedades inline y block del elemento. inline xq el elemento se comporta como texto simple y se inserta en un bbloqque de texto; block porque se le puede aplicar un alto y un ancho.
+	inline-block = comparte las propiedades inline y block del elemento. inline xq el elemento se comporta como 
+	texto simple y se inserta en un bbloqque de texto; block porque se le puede aplicar un alto y un ancho.
 	
-	position: relative = el elemento permanecera en el ffluo natural de la pagina. Actuara como un punto de anclae para los bloques absolutamente posicionados.
+	position: relative = el elemento permanecera en el ffluo natural de la pagina. Actuara como un punto de anclaje 
+	para los bloques absolutamente posicionados.
 	*/
 	/*height: 3vw;
 	width: 3vw;*/
@@ -100,7 +117,9 @@
 
 .navbar-center{
 	/*
-	flex = es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
+	flex = es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y 
+	llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible 
+	proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.
 	flex: flex-grow flex-shrin flex-basis;
 	
 	flex-grow = define la habilidad de crecer para un elemento flex, si es necesario
@@ -110,7 +129,7 @@
 	flex: 0 1 54vw;
 	min-width: 0px;
 	height: 9vh;
-	border: 1px solid red;
+	margin-left: 3vw;
 }
 
 .search-bar{
@@ -122,7 +141,6 @@
 	align-items: center;
 	flex: 1;
     flex-basis: 1e-9px;
-	border: 1px solid;
 }
 
 .search-box{
@@ -145,12 +163,15 @@
 	height: 1.5vw;
 	width: 1.5vw;
 	/*transform: translateY(4px);*/
-	margin-top: 4px;
+	margin-top: 1vh;
+}
+
+.hidden-icon{
+	display: none;
+	position: absolute;
 }
 
 .icon-content{
-	/*display: none;
-	position: absolute;*/
 	left: 0;
 	padding: 0 10px;
 	color: #030303;
@@ -172,10 +193,11 @@
 	height: 1vw;
 	width: 1vw;
 	/*transform: translateY(7px);*/
-	margin-top: 7px;
+	margin-top: 1.5vh;
 }
 
 .button-search{
+	height: 3vw;
 	border: 1px solid #d3d3d3;
 	background-color: #f8f8f8;
     border-radius: 0 2px 2px 0;
@@ -198,64 +220,184 @@
 
 .add-voice-container{	
 	background: #f9f9f9;
-	margin-left: 4px;
+	margin-left: 10px;
 }
 
 .icon-microphone{
-	height: 2vw;
-	width: 1.1vw;
+	height: 3vw;
+	width: 1.2vw;
 }
 
 .navbar-right{
+	width: 16vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
+}
+
+.icon-video{
+	color: #030303;
+	/* margin-right: 10px; */
 }
 
 .notifications{
+	position: relative;
 	background: white;
-	border: 1px solid;
+	align-items: center;
+	/* margin-left: 10px; */
 }
 
-/*.container-notifications-icon{}*/
-
 .icon-notifications{
-	position: relative;
-	transform: translateX(0.6vw);
+	height: 1.8vw;
+	width: 1.8vw;
+	margin-top: 0px;
 }
 
 .notifications-number{
+/* .notifications div{ */
 	height: 1.2vw;
 	width: 1.6vw;
 	background: #c00;
 	border-radius: 25px;
 	position: absolute;
-	top: 0px;
+	top: 6px;
 	right: 0px;
-	/*display: flex;
-	align-items: center;
-	justify-content: center;*/
-	/*transform: translateX(0vw)
-		translateY(-0.2vw) 
-		translateZ(1vw);*/
-/*}
-
-.notifications-number p{*/
 	color: white;
 	font-size: 2vh;
 	font-weight: 100;
-	/*margin: 0;
-	text-align: center;*/
+}
+
+.notifications-number span{
+	margin-left: 2px;
 }
 
 .picture-user{
 	background: white;
 	overflow: hidden;
-	/*margin-left: 4px;*/
+	/* margin-left: 10px; */
 }
 
 .user-profile{
-	width: 3vw;
-	height: 3vw;
+	/* width: 3vw;
+	height: 3vw; */
+	width: 100%;
+	height: 100%;
+}
+
+
+@media screen and (max-width: 1024px) {
+	/* iPad pro 1024x1366 41% */
+
+	.header{
+		height: 8vh;
+	}
+
+	.mobile-hidden{
+		display: none;
+	}
+
+	.desktop-hidden{
+		display: inline-block;
+	}
+
+	.nav-bar{
+		height: 8vh;
+		padding: 0 5vw;
+	}
+
+	.youtube-logo {
+		height: 8vh;
+	}
+
+	.youtube-logo img{
+		height: 28px;
+		width: 28px;
+	}
+
+	.youtube-logo p{
+		font-size: 19px;
+		font-weight: 100;
+		margin-left: 1vw;
+	}
+	
+	.circles{
+		height: 9vw;
+		width: 9vw;
+	}
+
+	.mobile-navbar{
+		width: 157vw;
+		background: #f1f1f1;
+	}
+
+	.navbar-right{
+		width: 20vw;
+	}
+
+	.mobile-button-search{
+		margin-right: 2vw;
+	}
+
+	.mobile-button-search img{
+		height: 100%;
+		width: 100%;
+		margin-top: 0px;
+	}
+
+	.search-box {
+		border: none;
+		margin-left: 0px;
+	}
+
+	.icon-content{
+		padding: 0 3px;
+	}
+
+	.icon-arrow-back{
+		height: 100%;
+		width: 90%;
+		margin-top: 0vh;
+	}
+
+	.input-search-mobile{
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #606060;
+		background: #f1f1f1;
+	}
+
+	.icon-search{
+		height: 100%;
+		width: 100%;
+	}
+
+	/* .button-search{
+		height: 3.4vw;
+	}
+
+	.icon-microphone{
+		width: 1.5vw;
+	}
+
+	.icon-video{
+		width: 3.2vw;
+	}
+
+	.icon-notifications{
+		height: 1.9vw;
+		width: 1.9vw;
+	}
+
+	.notifications-number{
+		top: 8px;
+		right: 2px;
+	} */
+}
+
+@media screen and (max-width: 768px) {
+	/* ipad 768x1024 50% */
+	.button-search{
+		/* height: 3.5vw; */
+	}
 }

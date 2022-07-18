@@ -26,25 +26,27 @@
 	<div class="container">
 		<header class="header">
 			<nav class="nav-bar">
-				<div class="navbar-left">
+				<div class="navbar-left" style="display: none;">
 					<!--<img src="./assets/icons/menu-outline.svg" alt="Menus" class="icon icon-menu" />-->
-					<svg class="icon icon-menu cursor-pointer"><use xlink:href="#icon-menu"></use></svg>
-					<div class="youtube-logo cursor-pointer">
-						<img src="./assets/img/favicon_32x32.png" alt="Logo" title="P&acute;gina de inicio de YouTube" />
-						<p>YouTube</p>
-					</div>
+					<svg class="icon icon-menu cursor-pointer mobile-hidden"><use xlink:href="#icon-menu"></use></svg>
+					<a href="./index.html">
+						<div class="youtube-logo cursor-pointer">
+							<img src="./assets/img/favicon_32x32.png" alt="Logo" title="P&acute;gina de inicio de YouTube" />
+							<p>YouTube</p>
+						</div>
+					</a>
 				</div>
 
-				<div class="navbar-center">
+				<div class="navbar-center mobile-hidden">
 					<form class="search-bar">
 						<div class="search-box">
-							<span class="icon-content">
+							<span class="icon-content hidden-icon">
 								<img src="./assets/icons/search_icon.svg" alt="icono buscar" class="icon icon-search" />
 							</span>
 							
 							<input type="text" placeholder="Buscar" class="input-search" onFocus="mmostrarIcono()" onKeyPress="mostrarIconoLimpiarInput()" />
 							
-							<span class="icon-content cursor-pointer" onClick="clarInput()">
+							<span class="icon-content cursor-pointer hidden-icon" onClick="clarInput()">
 								<img src="./assets/icons/close1.svg" alt="icono de limpiar busqueda" class="icon icon-clear" />
 							</span>
 						</div>
@@ -60,25 +62,41 @@
 					
 				</div>
 
-				<div class="navbar-right">
-					<img src="./assets/icons/add_video_icon.svg" alt="Crear" title="Crear" class="icon cursor-pointer" />
-					<!--<img src="./assets/icons/menu_desktop_icon.svg" alt="Aplicaciones de YouTube" title="Aplicaciones de YouTube" class="icon cursor-pointer" />-->
-					<div class="notifications cursor-pointer circles">
+				<div class="mobile-navbar hide">
+					<div class="search-box">
+						<span class="icon-content">
+							<img src="./assets/icons/arrow_back.svg" alt="icono buscar" class="icon icon-arrow-back" />
+						</span>
 						
-						<!--<div class="container-notifications-icon">-->
-							<img src="./assets/icons/bell_icon.svg" alt="Notificaciones" title="Notificaciones"  class="icon icon-search icon-notifications"/>
-						<!--</div>-->
+						<input type="text" placeholder="Buscar en YouTube" class="input-search-mobile" />
+						
+					</div>
+				</div>
+
+				<div class="navbar-right">
+					<img src="./assets/icons/add_video_icon.svg" alt="Crear" title="Crear" class="icon cursor-pointer icon-menu icon-video mobile-hidden" />
+					<!--<img src="./assets/icons/menu_desktop_icon.svg" alt="Aplicaciones de YouTube" title="Aplicaciones de YouTube" class="icon cursor-pointer" />-->
+					<div class="notifications cursor-pointer circles mobile-hidden">
+						
+						<img src="./assets/icons/bell_icon.svg" alt="Notificaciones" title="Notificaciones"  class="icon icon-search icon-notifications"/>
 						
 						<div class="notifications-number">
-							<!--<p>9+</p>-->
-							9+
+							<!-- <p>9+</p> -->
+							<span>9+</span>
 						</div>
 					</div>
-					<div class="picture-user cursor-pointer circles">
+					<div class="desktop-hidden circles mobile-button-search">
+						<img src="./assets/icons/search_icon.svg" alt="Buscar" title="Buscar" class="icon icon-search icon-search-2" onclick="colorizeNavbar()" />
+					</div>
+					<div class="picture-user cursor-pointer circles" style="display: none;">
 						<img src="./assets/img/avatar1.svg" alt="Perfil de usuario" class="icon user-profile" />
 					</div>
 				</div>
 			</nav>
+
+			<!-- <nav class="navbar-mobile nav-bar hide">
+				<div>a</div>
+			</nav> -->
 		</header>
 	</div>
 	

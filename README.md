@@ -2,11 +2,13 @@
 This clone of youtube is done for study purposes only, looking for to improve skills in HTML, CSS and JavaScript.
 
 # Iconos
-https://icomoon.io/
+[icomoon](https://icomoon.io/)
 
-https://fontawesome.com/
+[fontawesome](https://fontawesome.com/)
 
-https://ionic.io/ionicons
+[ionic](https://ionic.io/ionicons)
+
+[icon-icons](https://icon-icons.com/es/)
 
 # Guía de Flexbox
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+[Guía de Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
