@@ -286,8 +286,18 @@
 }
 
 
+@media screen and (max-width: 1366px) {
+	.button-search{
+		height: 2.7vw;
+	}
+}
+	
 @media screen and (max-width: 1024px) {
 	/* iPad pro 1024x1366 41% */
+	
+	/*.container{
+		height: 100vh;
+	}*/
 
 	.header{
 		height: 8vh;
@@ -311,19 +321,24 @@
 	}
 
 	.youtube-logo img{
-		height: 28px;
-		width: 28px;
+		/*height: 28px;
+		width: 28px;*/
+		height: 6vw;
+		width: 6vw;
 	}
 
 	.youtube-logo p{
-		font-size: 19px;
+		/*font-size: 19px;*/
+		font-size: 4.5vw;
 		font-weight: 100;
 		margin-left: 1vw;
 	}
 	
 	.circles{
-		height: 9vw;
-		width: 9vw;
+		/*height: 9vw;
+		width: 9vw;*/
+		height: 8vw;
+		width: 8vw;
 	}
 
 	.mobile-navbar{
@@ -362,6 +377,7 @@
 
 	.input-search-mobile{
 		width: 100%;
+		font-size: 3vw;
 		border: none;
 		border-bottom: 1px solid #606060;
 		background: #f1f1f1;
@@ -372,27 +388,51 @@
 		width: 100%;
 	}
 
-	/* .button-search{
-		height: 3.4vw;
+	.footer-mobile{
+		height: 8vh;
+		width: 100%;
+		z-index: 1;
+		position: absolute;
+		bottom: 0px;
+		border-top: 1px solid var(--borders-color);
 	}
-
-	.icon-microphone{
-		width: 1.5vw;
+	
+	.navbar-footer{
+		height: 8vh;
+		width: 70%;
+		padding: 0 15vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
-
-	.icon-video{
-		width: 3.2vw;
+	
+	.icons-footer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
-
-	.icon-notifications{
-		height: 1.9vw;
-		width: 1.9vw;
+	
+	.icons-footer img{
+		height: 5vw;
+		width: 5vw;
 	}
-
-	.notifications-number{
-		top: 8px;
-		right: 2px;
-	} */
+	
+	.label-icon{
+		font-size: 2.9vw;
+		font-weight: 100;
+	}
+	
+	.icon-shorts{
+		height: 5vw;
+		width: 5vw;
+		top: 2vw;
+	}
+	
+	.position-label{
+		position: absolute;
+		bottom: 1vw;
+	}
 }
 
 @media screen and (max-width: 768px) {
