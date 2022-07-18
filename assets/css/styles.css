@@ -4,6 +4,7 @@
 	--height-icons: 3vw;
 	--width-icons: 3vw;
 	--search-text-color: hsl(0, 0%, 6.7%);
+	--active-background: rgba(0, 0, 0, 0.05);
 	--height-circles: 3vw;
 	--width-circles: 3vw;
 }
@@ -14,6 +15,19 @@
 
 .cursor-pointer{
 	cursor: pointer;
+}
+
+.cursor-pointer:active{
+	background: var(--active-background);
+}
+
+.circles{
+	height: var(--height-circles);
+	width: var(--width-circles);
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .mobile-hidden{
@@ -46,6 +60,7 @@
 	border: 1px solid var(--borders-color);
 	z-index: 1;
 	transform: translateY(0);
+	background: white;
 }
 
 .nav-bar{
@@ -67,6 +82,7 @@
 }
 
 .navbar-left{
+	width: 12vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -77,6 +93,7 @@
 	text-decoration: none;
 	color: #030303;
 }
+
 .icon-menu{
 	/*
 	box-sizing = define como se calcula el ancho y alto de un elemento, ya sea q incluyan o no el padding y los 
@@ -93,12 +110,8 @@
 	*/
 	/*height: 3vw;
 	width: 3vw;*/
-	height: var(--height-icons);
-	width: var(--width-icons);
-	padding-right: 1vw;
-	box-sizing: border-box;
-	display: inline-block;
-	position: relative;
+	height: 1.5vw;
+	width: 1.5vw;
 }
 
 .youtube-logo{
@@ -209,15 +222,6 @@
 	width: 3vw;
 }
 
-.circles{
-	height: var(--height-circles);
-	width: var(--width-circles);
-	border-radius: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 .add-voice-container{	
 	background: #f9f9f9;
 	margin-left: 10px;
@@ -285,6 +289,41 @@
 	height: 100%;
 }
 
+.lateral-menu-bar{
+	width: 20vw;
+	position: absolute;
+	top: 4vw;
+	font-size: 1vw;
+	font-weight: 300;
+	/*transition-duration: 0ms;
+    touch-action: pan-y;*/
+	border: 1px solid;
+}
+
+.first-section, 
+.second-section, 
+.third-section, 
+.fourth-section,
+.fifth-section, 
+.sixth-section{
+	border-bottom: 1px solid var(--borders-color);
+}
+
+.lateral-menu{
+	list-style-type: none;
+}
+
+.lateral-menu li{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 1px solid red;
+}
+
+.lateral-menu li img{
+	height: 1.5vw;
+    width: 1.5vw;
+}
 
 @media screen and (max-width: 1366px) {
 	.button-search{
