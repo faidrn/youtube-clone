@@ -29,7 +29,7 @@
 			<nav class="nav-bar">
 				<div class="navbar-left">
 					
-					<div class="circles cursor-pointer">
+					<div class="circles cursor-pointer" onClick="lateralMenu()">
 						<svg class="icon icon-menu mobile-hidden"><use xlink:href="#icon-menu"></use></svg>
 					</div>
 					
@@ -105,133 +105,133 @@
 			</nav> -->
 		</header>
 		
-		<section class="lateral-menu-bar mobile-hidden">
+		<section class="lateral-menu-bar mobile-hidden scroll-y lateral-menu-expanded">
 			<ul class="lateral-menu">
 				<div class="first-section">
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/inicio_icon.svg" alt="Inicio" class="icon lateral-menu-icons"  />
 						<p>Inicio</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/compass_icon.svg" alt="Explorar" class="icon lateral-menu-icons" />
 						<p>Explorar</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/youtube_subscriptions_icon.svg" alt="Suscripciones" class="icon lateral-menu-icons" />
 						<p>Suscripciones</p>
 					</li>
 				</div>
 				<div class="second-section">
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/library_icon.svg" alt="Biblioteca" class="icon lateral-menu-icons" />
 						<p>Biblioteca</p>
 					</li>
-					<li>
+					<li class="cursor-pointer visibility-option-menu flex-direction-row">
 						<img src="./assets/icons/history_icon.svg" alt="Historial" class="icon lateral-menu-icons" />
 						<p>Historial</p>
 					</li>
-					<li>
+					<li class="cursor-pointer visibility-option-menu flex-direction-row">
 						<img src="./assets/icons/videos_icon.svg" alt="Mis v&iacute;deos" class="icon lateral-menu-icons" />
 						<p>Mis v&iacute;deos</p>
 					</li>
-					<li>
+					<li class="cursor-pointer visibility-option-menu flex-direction-row">
 						<img src="./assets/icons/late_icon.svg" alt="Ver m&aacute;s tarde" class="icon lateral-menu-icons" />
 						<p>Ver m&aacute;s tarde</p>
 					</li>
-					<li>
+					<li class="cursor-pointer visibility-option-menu flex-direction-row">
 						<img src="./assets/icons/like_icon.svg" alt="V&iacute;deos que me gustan" class="icon lateral-menu-icons" />
 						<p>V&iacute;deos que me gustan</p>
 					</li>
 				</div>
-				<div class="third-section">
+				<div class="third-section visibility-option-menu">
 					<h2>SUSCRIPCIONES</h2>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<div class="picture-user cursor-pointer circles">
 							<img src="./assets/img/avatar2.svg" alt="Suscripci&oacute;n 1" class="icon user-profile" />
 						</div>
 						<p>Suscripci&oacute;n 1</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<div class="picture-user cursor-pointer circles">
 							<img src="./assets/img/avatar3.svg" alt="Suscripci&oacute;n 2" class="icon user-profile" />
 						</div>
 						<p>Suscripci&oacute;n 2</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<div class="picture-user cursor-pointer circles">
 							<img src="./assets/img/avatar4.svg" alt="Suscripci&oacute;n 3" class="icon user-profile" />
 						</div>
 						<p>Suscripci&oacute;n 3</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<div class="picture-user cursor-pointer circles">
 							<img src="./assets/img/avatar5.svg" alt="Suscripci&oacute;n 4" class="icon user-profile" />
 						</div>
 						<p>Suscripci&oacute;n 4</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<div class="cursor-pointer circles">
 							<img src="./assets/icons/arrow_right_icon.svg" alt="Mostrar m&aacute;s" class="icon arrow-down-icon" />
 						</div>
 						<p>Mostrar m&aacute;s</p>
 					</li>
 				</div>
-				<div class="fourth-section">
+				<div class="fourth-section visibility-option-menu">
 					<h2>EXPLORAR</h2>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/video_games_icon.svg" alt="Videojuegos" class="icon lateral-menu-icons" />
 						<p>Videojuegos</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/video_live_icon.svg" alt="Directo" class="icon lateral-menu-icons" />
 						<p>Directo</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/idea_icon.svg" alt="Aprendizaje" class="icon lateral-menu-icons" />
 						<p>Aprendizaje</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/sports_icon.svg" alt="Deportes" class="icon lateral-menu-icons" />
 						<p>Deportes</p>
 					</li>
 				</div>
-				<div class="fifth-section">
+				<div class="fifth-section visibility-option-menu">
 					<h2>M&Aacute;S DE YOUTUBE</h2>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/img/favicon_32x32.png" alt="YouTube Premium" class="icon lateral-menu-icons" />
 						<p>YouTube Premium</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/creator_studio.png" alt="Creator Studio" class="icon lateral-menu-icons" />
 						<p>Creator Studio</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/youtube_music.svg" alt="YouTube Music" class="icon lateral-menu-icons" />
 						<p>YouTube Music</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/YouTube_Kids.svg" alt="YouTube Kids" class="icon lateral-menu-icons" />
 						<p>YouTube Kids</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/youtube-tv.svg" alt="YouTube TV" class="icon lateral-menu-icons" />
 						<p>YouTube TV</p>
 					</li>
 				</div>
-				<div class="sixth-section">
-					<li>
+				<div class="sixth-section visibility-option-menu">
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/settings_icon.svg" alt="Configuraci&oacute;n" class="icon lateral-menu-icons" />
 						<p>Configuraci&oacute;n</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/flag_icon.svg" alt="Historial de denuncias" class="icon lateral-menu-icons" />
 						<p>Historial de denuncias</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/help_icon.svg" alt="Ayuda" class="icon lateral-menu-icons" />
 						<p>Ayuda</p>
 					</li>
-					<li>
+					<li class="cursor-pointer flex-direction-row">
 						<img src="./assets/icons/suggestions_icon.svg" alt="Enviar sugerencias" class="icon lateral-menu-icons" />
 						<p>Enviar sugerencias</p>
 					</li>

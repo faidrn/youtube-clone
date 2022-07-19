@@ -40,17 +40,18 @@
 	display: none;
 }
 
-.lateral-menu li:hover{
-	background: var(--hover-background);
+.scroll-y{
+	overflow-y: scroll;
 }
 
-.lateral-menu li:active{
-	background: var(--active-background);
-	font-weight: 400;
-}
+
 
 
 /*MAIN STRUCTURE*/
+body{
+	height: 100vh;
+}
+
 .container{
 	background: transparent;
 }
@@ -301,16 +302,24 @@
 }
 
 .lateral-menu-bar{
-	width: 17vw;
-	position: absolute;
+	height: 91vh;
 	top: 4vw;
 	font-size: 1vw;
 	font-weight: 300;
+	position: fixed;
 	/*transition-duration: 0ms;
     touch-action: pan-y;*/
-	border: 1px solid;
+	
 }
 
+.lateral-menu-expanded{
+	width: 17vw;
+}
+
+.lateral-menu-not-expanded{
+	width: 6vw;
+}
+	
 .first-section, 
 .second-section, 
 .third-section, 
@@ -321,18 +330,36 @@
 }
 
 .lateral-menu{
+	padding-left: 2vw;
 	list-style-type: none;
+	
 }
 
 .lateral-menu li{
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	gap: 1vw;
 }
 
+.flex-direction-row{
+	flex-direction: row;
+}
+
+.flex-direction-column{
+	flex-direction: column;
+}
+
 .lateral-menu li img{
 	justify-content: flex-start;
+}
+
+.lateral-menu li:hover{
+	background: var(--hover-background);
+}
+
+.lateral-menu li:active{
+	background: var(--active-background);
+	font-weight: 400;
 }
 
 .lateral-menu-icons{
@@ -349,6 +376,20 @@
 .arrow-down-icon{
 	transform: rotate(90deg);
 }
+
+.first-section li:nth-child(1){
+	background: var(--active-background);
+	font-weight: 400;
+}
+
+.visibility-option-menu{
+	visibility: visible;
+}
+
+.not-visibility-option-menu{
+	visibility: hidden;
+}
+
 
 
 @media screen and (max-width: 1366px) {
