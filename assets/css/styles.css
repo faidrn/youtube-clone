@@ -4,7 +4,8 @@
 	--height-icons: 3vw;
 	--width-icons: 3vw;
 	--search-text-color: hsl(0, 0%, 6.7%);
-	--active-background: rgba(0, 0, 0, 0.05);
+	--hover-background: rgba(0, 0, 0, 0.05);
+	--active-background: #ccc;
 	--height-circles: 3vw;
 	--width-circles: 3vw;
 }
@@ -38,6 +39,16 @@
 .hide{
 	display: none;
 }
+
+.lateral-menu li:hover{
+	background: var(--hover-background);
+}
+
+.lateral-menu li:active{
+	background: var(--active-background);
+	font-weight: 400;
+}
+
 
 /*MAIN STRUCTURE*/
 .container{
@@ -290,7 +301,7 @@
 }
 
 .lateral-menu-bar{
-	width: 20vw;
+	width: 17vw;
 	position: absolute;
 	top: 4vw;
 	font-size: 1vw;
@@ -317,13 +328,28 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	border: 1px solid red;
+	gap: 1vw;
 }
 
 .lateral-menu li img{
-	height: 1.5vw;
-    width: 1.5vw;
+	justify-content: flex-start;
 }
+
+.lateral-menu-icons{
+	height: 1.5vw;
+    width: 1.5vw;	
+}
+
+.lateral-menu h2{
+	color: #606060;
+	font-size: 1vw;
+	font-weight: 400;
+}
+
+.arrow-down-icon{
+	transform: rotate(90deg);
+}
+
 
 @media screen and (max-width: 1366px) {
 	.button-search{
