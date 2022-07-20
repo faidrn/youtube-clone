@@ -304,12 +304,19 @@ body{
 .lateral-menu-bar{
 	height: 91vh;
 	top: 4vw;
-	font-size: 1vw;
 	font-weight: 300;
 	position: fixed;
 	/*transition-duration: 0ms;
     touch-action: pan-y;*/
 	
+}
+
+.font-size-1vw{
+	font-size: 1vw;
+}
+
+.font-size-09vw{
+	font-size: 0.9vw;
 }
 
 .lateral-menu-expanded{
@@ -330,9 +337,15 @@ body{
 }
 
 .lateral-menu{
-	padding-left: 2vw;
 	list-style-type: none;
-	
+}
+
+.padding-left-2vw{
+	padding-left: 2vw;
+}
+
+.padding-left-0vw{
+	padding-left: 0vw;
 }
 
 .lateral-menu li{
@@ -347,6 +360,14 @@ body{
 
 .flex-direction-column{
 	flex-direction: column;
+}
+
+.flex-direction-column img{
+	margin-top: 1vw;
+}
+
+.flex-direction-column p{
+	margin-top: 1vw;
 }
 
 .lateral-menu li img{
@@ -390,6 +411,35 @@ body{
 	visibility: hidden;
 }
 
+.buttons-bar{
+	position: fixed;
+	top: 4.7vw;
+	left: 17vw;
+	border-left: none;
+	border-right: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 400;
+	font-size: 1.2vw;
+}
+
+.display-flex{
+	/* Agregar esta clase a la flecha de la barra de botones cuando se haga desplazamiento a la derecha */
+	display: flex;
+}
+
+.left-arrow-buttons-bar{
+	height: 100%;
+    width: 5vw;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+	transform: rotate(180deg);
+	/* degradado */
+	background: linear-gradient(-90deg, white, transparent);
+}
 
 
 @media screen and (max-width: 1366px) {
@@ -424,6 +474,7 @@ body{
 
 	.youtube-logo {
 		height: 8vh;
+		width: 21vw;
 	}
 
 	.youtube-logo img{
