@@ -1,32 +1,39 @@
+const inputSearch = document.getElementById('input-search');
+const iconClear = document.getElementById('iconClear');
+const hamburgerButton = document.getElementById('hamburgerButton');
+const iconPreviousButtonsBar = document.getElementById('iconPreviousButtonsBar');
+const iconNextButtonsBar = document.getElementById('iconNextButtonsBar');
+
+
+// Eventos del input
+inputSearch.addEventListener('focus', showIconSearch); 
+
 function showIconSearch(){
 	const iconToShow = document.querySelectorAll('.icon-content');
 	
-	//quitar la clase hide-alert-success para q se muestre el div
+	//quitar la clase para q se muestre el div
 	iconToShow[0].classList.remove('hidden-icon');
 }
 
-function hideIconSearch(){
+inputSearch.addEventListener('blur', function (){
 	const iconToHide = document.querySelectorAll('.icon-content');
 	
 	//Agregar clase para ocultar elemento
 	iconToHide[0].classList.add('hidden-icon');
-}
+});
 
-function showIconClear(){
+inputSearch.addEventListener('keypress', function (){
 	const iconToShow = document.querySelectorAll('.icon-content');
 	
+	// quitamos la clase q oculta el icono de limmpiar el input
 	iconToShow[1].classList.remove('hidden-icon');
-}
+});
 
-function hideIconClear(){
-	const iconToShow = document.querySelectorAll('.icon-content');
-	
-	iconToShow[1].classList.add('hidden-icon');
-}
 
-function clarInput(){
+iconClear.addEventListener('click', function(){
 	const inputToClear = document.getElementById('input-search');
 	
+	//Limpiamos el input y pasamos el enfoque al mismo
 	inputToClear.value = "";
 	inputToClear.focus();
 	
@@ -35,22 +42,35 @@ function clarInput(){
 	
 	//mostar icono buscar
 	showIconSearch();
+});
+
+function hideIconClear(){
+	const iconToShow = document.querySelectorAll('.icon-content');
+	
+	iconToShow[1].classList.add('hidden-icon');
 }
+
+
+// Eventos del menu lateral
+hamburgerButton.addEventListener('click', lateralMenu);
 
 let flag = 0;
 function lateralMenu(){
-	const menu = document.querySelectorAll('.lateral-menu-bar');
+	const menu = document.querySelector('.lateral-menu-bar');
 	const optionMenuToHide = document.querySelectorAll('.visibility-option-menu');
 	const optionMenuToShow = document.querySelectorAll('.not-visibility-option-menu');
-	const borderBottomFirstSection = document.querySelectorAll('.first-section');
-	const lateralMenu = document.querySelectorAll('.lateral-menu');
+	const borderBottomFirstSection = document.querySelector('.first-section');
+	const lateralMenu = document.querySelector('.lateral-menu');
 	const flexDirectionRow = document.querySelectorAll('.flex-direction-row');
 	const flexDirectionColumn = document.querySelectorAll('.flex-direction-column');
+	const buttonsBar = document.querySelector('.buttons-bar');
+	const rightArrowButtonsBar = document.querySelector('.right-arrow-buttons-bar');
+	
 	
 	if (flag == 0){
 		// Cambiar el ancho del menu (reducir)
-		menu[0].classList.remove('lateral-menu-expanded', 'font-size-1vw');
-		menu[0].classList.add('lateral-menu-not-expanded', 'font-size-09vw');
+		menu.classList.remove('lateral-menu-expanded', 'font-size-1vw');
+		menu.classList.add('lateral-menu-not-expanded', 'font-size-09vw');
 		
 		// Ocutar opciones
 		//recorrer TODOS los menus
@@ -61,14 +81,14 @@ function lateralMenu(){
 		});
 		
 		//quitar la primer division
-		borderBottomFirstSection[0].style.borderBottom = 'none';
+		borderBottomFirstSection.style.borderBottom = 'none';
 		
 		// Quitar el scroll
-		menu[0].classList.remove('scroll-y');
+		menu.classList.remove('scroll-y');
 
 		// Quitar el padding izquierdo de 2vw y agregar un padding de 0vw al elemento ul
-		lateralMenu[0].classList.remove('padding-left-2vw');
-		lateralMenu[0].classList.add('padding-left-0vw');
+		lateralMenu.classList.remove('padding-left-2vw');
+		lateralMenu.classList.add('padding-left-0vw');
 		
 		//Cambiar de row a column el flexbox
 		flexDirectionRow.forEach((everyOption, i) => {
@@ -77,11 +97,18 @@ function lateralMenu(){
 			flexDirectionRow[i].classList.add('flex-direction-column', 'height-li-not-expanded')
 		});
 		
+		// Cambiar el margen iquierdo de la barra de botones de acuerdo al nuevo ancho del menu lateral
+		buttonsBar.classList.remove('left-17');
+		buttonsBar.classList.add('left-6');
+		
+		rightArrowButtonsBar.classList.remove('right-17');
+		rightArrowButtonsBar.classList.add('right-6');
+		
 		flag += 1;
 	} else{
 		// Cambiar el ancho del menu (Ampliar)
-		menu[0].classList.remove('lateral-menu-not-expanded', 'font-size-09vw');
-		menu[0].classList.add('lateral-menu-expanded', 'font-size-1vw');
+		menu.classList.remove('lateral-menu-not-expanded', 'font-size-09vw');
+		menu.classList.add('lateral-menu-expanded', 'font-size-1vw');
 		
 		// Mostrar opciones
 		//recorrer TODOS los menus
@@ -92,14 +119,14 @@ function lateralMenu(){
 		});
 		
 		//agregar la primer division
-		borderBottomFirstSection[0].style.borderBottom = '1px solid var(--borders-color)';
+		borderBottomFirstSection.style.borderBottom = '1px solid var(--borders-color)';
 		
 		//Aggregar el scroll
-		menu[0].classList.add('scroll-y');
+		menu.classList.add('scroll-y');
 
 		// Agregar el padding izquierdo de 2vw y quitar el padding de 0vw al elemento ul
-		lateralMenu[0].classList.remove('padding-left-0vw');
-		lateralMenu[0].classList.add('padding-left-2vw');
+		lateralMenu.classList.remove('padding-left-0vw');
+		lateralMenu.classList.add('padding-left-2vw');
 		
 		//Cambiar de column a row el flexbox
 		flexDirectionColumn.forEach((everyOption, i) => {
@@ -107,8 +134,28 @@ function lateralMenu(){
 			flexDirectionColumn[i].classList.remove('flex-direction-column', 'height-li-not-expanded')
 			flexDirectionColumn[i].classList.add('flex-direction-row')
 		});
-
+		
+		// Cambiar el margen iquierdo de la barra de botones de acuerdo al nuevo ancho del menu lateral
+		buttonsBar.classList.remove('left-6');
+		buttonsBar.classList.add('left-17');
+		
+		rightArrowButtonsBar.classList.remove('right-6');
+		rightArrowButtonsBar.classList.add('right-17');
+		
 		flag -= 1;
 	}
 	
 }
+
+
+// Eventos de la barra de botones
+iconNextButtonsBar.addEventListener('click', function(){
+	const leftArrowButtonsBar = document.querySelector('.left-arrow-buttons-bar');
+	// Mostrar el icono de Anterior
+		// Remover la clase q lo oculta y poner la clase para centrarlo
+	leftArrowButtonsBar.classList.remove('hide');
+	leftArrowButtonsBar.classList.add('display-flex');
+});
+
+
+

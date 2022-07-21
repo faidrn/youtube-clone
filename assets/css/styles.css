@@ -414,14 +414,13 @@ body{
 .buttons-bar{
 	position: fixed;
 	top: 4.7vw;
-	left: 17vw;
 	border-left: none;
 	border-right: none;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	font-weight: 400;
+	font-weight: 200;
 	font-size: 1.2vw;
 }
 
@@ -430,21 +429,64 @@ body{
 	display: flex;
 }
 
-.left-arrow-buttons-bar{
+.left-6{
+	left: 6vw;
+}
+
+.left-17{
+	left: 17vw;
+}
+
+.left-and-right-arrows{
 	height: 100%;
     width: 5vw;
     /* display: flex; */
     align-items: center;
     justify-content: center;
-	transform: rotate(180deg);
-	/* degradado */
-	background: linear-gradient(-90deg, white, transparent);
 }
 
+.left-arrow-buttons-bar{
+	position: relative;
+	transform: rotate(180deg);
+	/* degradado */
+	/*background: linear-gradient(-90deg, white 70%, transparent);*/
+}
+
+.right-arrow-buttons-bar{
+	position: relative;
+	right: 17vw;
+	/* degradado */
+	/*background: linear-gradient(-90deg, white 70%, transparent);*/
+	border: 1px solid;
+}
+
+.linear-gradient{
+	/* degradado */
+	background: linear-gradient(-90deg, white 70%, transparent);
+}
+
+.right-6{
+	right: 6vw;
+}
+
+.right-17{
+	right: 17vw;
+}
+
+.buttons-bar button{
+	height: 2.4vw;
+	min-width: 5vw;
+	border-radius: 255px;
+	border: 1px solid var(--active-background);
+}
 
 @media screen and (max-width: 1366px) {
 	.button-search{
 		height: 2.7vw;
+	}
+	
+	.buttons-bar {
+    	top: 4.2vw;
 	}
 }
 	

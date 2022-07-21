@@ -29,7 +29,7 @@
 			<nav class="nav-bar">
 				<div class="navbar-left">
 					
-					<div class="circles cursor-pointer" onClick="lateralMenu()">
+					<div id="hamburgerButton" class="circles cursor-pointer">
 						<svg class="icon icon-menu mobile-hidden"><use xlink:href="#icon-menu"></use></svg>
 					</div>
 					
@@ -48,9 +48,9 @@
 								<img src="./assets/icons/search_icon.svg" alt="icono buscar" class="icon icon-search" />
 							</span>
 							
-							<input type="text" id="input-search" placeholder="Buscar" class="input-search" onFocus="showIconSearch()" onBlur="hideIconSearch()" onKeyPress="showIconClear()" />
+							<input type="text" id="input-search" placeholder="Buscar" class="input-search" />
 							
-							<span class="icon-content cursor-pointer hidden-icon" onClick="clarInput()">
+							<span id="iconClear" class="icon-content cursor-pointer hidden-icon">
 								<img src="./assets/icons/close1.svg" alt="icono de limpiar busqueda" class="icon icon-clear" />
 							</span>
 						</div>
@@ -100,9 +100,6 @@
 				</div>
 			</nav>
 
-			<!-- <nav class="navbar-mobile nav-bar hide">
-				<div>a</div>
-			</nav> -->
 		</header>
 		
 		<section class="lateral-menu-bar mobile-hidden scroll-y lateral-menu-expanded font-size-1vw">
@@ -239,9 +236,11 @@
 			</ul>
 		</section>
 		
-		<section class="buttons-bar header mobile-hidden">
-			<div class="left-arrow-buttons-bar cursor-pointer hide">
-				<img src="./assets/icons/arrow_right_icon.svg" alt="Mostrar m&aacute;s" class="icon" />
+		<section class="buttons-bar header mobile-hidden left-17">
+			<div class="left-arrow-buttons-bar hide left-and-right-arrows linear-gradient">
+				<span id="iconPreviousButtonsBar" class="cursor-pointer circles">
+					<img src="./assets/icons/arrow_right_icon.svg" alt="Anterior" title="Anterior" class="icon" />
+				</span>
 			</div>
 
 			<button class="cursor-pointer">
@@ -287,9 +286,15 @@
 			<button class="cursor-pointer">
 				Novedad para ti
 			</button>
+			
+			<button class="cursor-pointer">
+				Otros
+			</button>
 
-			<div class="right-arrow-buttons-bar cursor-pointer">
-				<img src="./assets/icons/arrow_right_icon.svg" alt="Mostrar m&aacute;s" class="icon" />
+			<div class="right-arrow-buttons-bar display-flex left-and-right-arrows right-17 linear-gradient">
+				<span id="iconNextButtonsBar" class="cursor-pointer circles">
+					<img src="./assets/icons/arrow_right_icon.svg" alt="Siguiente" title="Siguiente" class="icon" />
+				</span>
 			</div>
 		</section>
 
