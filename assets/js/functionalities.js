@@ -3,6 +3,8 @@ const iconClear = document.getElementById('iconClear');
 const hamburgerButton = document.getElementById('hamburgerButton');
 const iconPreviousButtonsBar = document.getElementById('iconPreviousButtonsBar');
 const iconNextButtonsBar = document.getElementById('iconNextButtonsBar');
+const leftArrowButtonsBar = document.querySelector('.left-arrow-buttons-bar');
+const buttonsContainer = document.querySelector('.buttons-container');
 
 
 // Eventos del input
@@ -149,13 +151,46 @@ function lateralMenu(){
 
 
 // Eventos de la barra de botones
+let margin = 0;
 iconNextButtonsBar.addEventListener('click', function(){
-	const leftArrowButtonsBar = document.querySelector('.left-arrow-buttons-bar');
-	// Mostrar el icono de Anterior
+	
+	// Quitar el padding al contenedor de los botones 
+	buttonsContainer.classList.remove('padding-left-right-1');
+	// Aumentar el ancho del contenedor de los botones para q estos conserven su ancho
+	buttonsContainer.classList.add('width-129');
+	
+	if (margin == 0){
+		
+		// Mostrar el icono de Anterior
 		// Remover la clase q lo oculta y poner la clase para centrarlo
-	leftArrowButtonsBar.classList.remove('hide');
-	leftArrowButtonsBar.classList.add('display-flex');
+		leftArrowButtonsBar.classList.remove('hide');
+		leftArrowButtonsBar.classList.add('display-flex');
+	}
+	
+	if (margin >= -17){
+		margin -= 1;
+		buttonsContainer.style.marginLeft = margin + "vw";
+	} 
 });
 
-
+iconPreviousButtonsBar.addEventListener('click', function(){
+	
+	if (margin < 0){
+		margin += 1;
+		buttonsContainer.style.marginLeft = margin + "vw";
+	} 
+	
+	if (margin == 0){
+		// Ocultamos el icono de Anterior
+		// Remover la clase q lo muestra y poner la clase para ocultarlo
+		leftArrowButtonsBar.classList.remove('display-flex');
+		leftArrowButtonsBar.classList.add('hide');
+		
+		// Poner el padding al contenedor de los botones 
+		buttonsContainer.classList.add('padding-left-right-1');
+		// Quitar el ancho del contenedor, dado qqvuelve a su tamaño original
+		buttonsContainer.classList.remove('width-129');
+	}
+	
+});
 

@@ -40,6 +40,47 @@
 	display: none;
 }
 
+
+.display-flex{
+	/* Agregar esta clase a la flecha de la barra de botones cuando se haga desplazamiento a la derecha */
+	display: flex;
+}
+
+
+.flex-direction-row{
+	flex-direction: row;
+}
+
+.flex-direction-column{
+	flex-direction: column;
+}
+
+
+.font-size-1vw{
+	font-size: 1vw;
+}
+
+.font-size-09vw{
+	font-size: 0.9vw;
+}
+
+.left-6{
+	left: 6vw;
+}
+
+.left-17{
+	left: 17vw;
+}
+
+
+.padding-left-2vw{
+	padding-left: 2vw;
+}
+
+.padding-left-0vw{
+	padding-left: 0vw;
+}
+
 .scroll-y{
 	overflow-y: scroll;
 }
@@ -311,13 +352,6 @@ body{
 	
 }
 
-.font-size-1vw{
-	font-size: 1vw;
-}
-
-.font-size-09vw{
-	font-size: 0.9vw;
-}
 
 .lateral-menu-expanded{
 	width: 17vw;
@@ -340,26 +374,11 @@ body{
 	list-style-type: none;
 }
 
-.padding-left-2vw{
-	padding-left: 2vw;
-}
-
-.padding-left-0vw{
-	padding-left: 0vw;
-}
 
 .lateral-menu li{
 	display: flex;
 	align-items: center;
 	gap: 1vw;
-}
-
-.flex-direction-row{
-	flex-direction: row;
-}
-
-.flex-direction-column{
-	flex-direction: column;
 }
 
 .flex-direction-column img{
@@ -420,26 +439,13 @@ body{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	font-weight: 200;
-	font-size: 1.2vw;
+	overflow: hidden;
 }
 
-.display-flex{
-	/* Agregar esta clase a la flecha de la barra de botones cuando se haga desplazamiento a la derecha */
-	display: flex;
-}
-
-.left-6{
-	left: 6vw;
-}
-
-.left-17{
-	left: 17vw;
-}
 
 .left-and-right-arrows{
 	height: 100%;
-    width: 5vw;
+    width: 8vw;
     /* display: flex; */
     align-items: center;
     justify-content: center;
@@ -457,12 +463,28 @@ body{
 	right: 17vw;
 	/* degradado */
 	/*background: linear-gradient(-90deg, white 70%, transparent);*/
-	border: 1px solid;
 }
 
 .linear-gradient{
 	/* degradado */
 	background: linear-gradient(-90deg, white 70%, transparent);
+}
+
+.buttons-container{
+	/*width: 100%;*/
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/*justify-content: space-between;*/
+	gap: 0.5vw;
+}
+
+.width-129{
+	width: 129%;
+}
+
+.padding-left-right-1{
+	padding: 0 1vw;
 }
 
 .right-6{
@@ -473,11 +495,27 @@ body{
 	right: 17vw;
 }
 
-.buttons-bar button{
+.buttons-container button{
 	height: 2.4vw;
 	min-width: 5vw;
+	font-weight: 400;
+	font-size: 1vw;
 	border-radius: 255px;
 	border: 1px solid var(--active-background);
+}
+
+.padding-buttons{
+	padding: 0 0.5vw;
+}
+
+.buttons-container button:hover{
+	background: var(--active-background);
+}
+
+.buttons-container button:nth-child(1){
+	background:  #030303;
+	border: 1px solid  #030303;
+	color: white;
 }
 
 @media screen and (max-width: 1366px) {
