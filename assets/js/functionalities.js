@@ -1,4 +1,5 @@
 const inputSearch = document.getElementById('input-search');
+const iconSearchInput = document.getElementById('iconSearchInput');
 const iconClear = document.getElementById('iconClear');
 const hamburgerButton = document.getElementById('hamburgerButton');
 const iconPreviousButtonsBar = document.getElementById('iconPreviousButtonsBar');
@@ -11,33 +12,38 @@ const buttonsContainer = document.querySelector('.buttons-container');
 inputSearch.addEventListener('focus', showIconSearch); 
 
 function showIconSearch(){
-	const iconToShow = document.querySelectorAll('.icon-content');
+	//const iconToShow = document.querySelectorAll('.icon-content');
 	
 	//quitar la clase para q se muestre el div
-	iconToShow[0].classList.remove('hidden-icon');
+	//iconToShow[0].classList.remove('hidden-icon');
+	iconSearchInput.classList.remove('hidden-icon');
 }
 
 inputSearch.addEventListener('blur', function (){
-	const iconToHide = document.querySelectorAll('.icon-content');
+	//const iconToHide = document.querySelectorAll('.icon-content');
 	
 	//Agregar clase para ocultar elemento
-	iconToHide[0].classList.add('hidden-icon');
+	//iconToHide[0].classList.add('hidden-icon');
+	iconSearchInput.classList.add('hidden-icon');
 });
 
 inputSearch.addEventListener('keypress', function (){
-	const iconToShow = document.querySelectorAll('.icon-content');
+	//const iconToShow = document.querySelectorAll('.icon-content');
 	
 	// quitamos la clase q oculta el icono de limmpiar el input
-	iconToShow[1].classList.remove('hidden-icon');
+	//iconToShow[1].classList.remove('hidden-icon');
+	iconClear.classList.remove('hidden-icon');
 });
 
 
 iconClear.addEventListener('click', function(){
-	const inputToClear = document.getElementById('input-search');
+	//const inputToClear = document.getElementById('input-search');
 	
 	//Limpiamos el input y pasamos el enfoque al mismo
-	inputToClear.value = "";
-	inputToClear.focus();
+	//inputToClear.value = "";
+	//inputToClear.focus();
+	inputSearch.value = "";
+	inputSearch.focus();
 	
 	// ocultar icono limpiar
 	hideIconClear();
@@ -47,9 +53,10 @@ iconClear.addEventListener('click', function(){
 });
 
 function hideIconClear(){
-	const iconToShow = document.querySelectorAll('.icon-content');
+	//const iconToShow = document.querySelectorAll('.icon-content');
 	
-	iconToShow[1].classList.add('hidden-icon');
+	//iconToShow[1].classList.add('hidden-icon');
+	iconClear.classList.add('hidden-icon');
 }
 
 
@@ -68,6 +75,8 @@ function lateralMenu(){
 	const buttonsBar = document.querySelector('.buttons-bar');
 	const rightArrowButtonsBar = document.querySelector('.right-arrow-buttons-bar');
 	
+	//Agregar o quitar el scroll
+	menu.classList.toggle('scroll-y');
 	
 	if (flag == 0){
 		// Cambiar el ancho del menu (reducir)
@@ -85,9 +94,6 @@ function lateralMenu(){
 		//quitar la primer division
 		borderBottomFirstSection.style.borderBottom = 'none';
 		
-		// Quitar el scroll
-		menu.classList.remove('scroll-y');
-
 		// Quitar el padding izquierdo de 2vw y agregar un padding de 0vw al elemento ul
 		lateralMenu.classList.remove('padding-left-2vw');
 		lateralMenu.classList.add('padding-left-0vw');
@@ -122,9 +128,6 @@ function lateralMenu(){
 		
 		//agregar la primer division
 		borderBottomFirstSection.style.borderBottom = '1px solid var(--borders-color)';
-		
-		//Aggregar el scroll
-		menu.classList.add('scroll-y');
 
 		// Agregar el padding izquierdo de 2vw y quitar el padding de 0vw al elemento ul
 		lateralMenu.classList.remove('padding-left-0vw');
