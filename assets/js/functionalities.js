@@ -6,6 +6,7 @@ const iconPreviousButtonsBar = document.getElementById('iconPreviousButtonsBar')
 const iconNextButtonsBar = document.getElementById('iconNextButtonsBar');
 const leftArrowButtonsBar = document.querySelector('.left-arrow-buttons-bar');
 const buttonsContainer = document.querySelector('.buttons-container');
+const buttonNotifications = document.querySelector('.notifications');
 
 
 // Eventos del input
@@ -194,6 +195,23 @@ iconPreviousButtonsBar.addEventListener('click', function(){
 		// Quitar el ancho del contenedor, dado qqvuelve a su tamaño original
 		buttonsContainer.classList.remove('width-129');
 	}
+	
+});
+
+
+// Mostrar las notificaciones
+buttonNotifications.addEventListener('click', function(){
+	const desktopNotifications = document.querySelector('.desktop-notifications');
+	const notificationsNumber = document.querySelector('.notifications-number');
+	
+	desktopNotifications.classList.toggle('hide');
+	notificationsNumber.classList.toggle('hide');
+});
+
+//Al dar click en cualquier parte de la pagina 
+	//evaluar si estan abiertas las notificaciones
+		//Si estan abiertas Cerrarlas
+document.addEventListener("click", function(){
 	
 });
 

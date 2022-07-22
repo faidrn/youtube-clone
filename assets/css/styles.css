@@ -72,6 +72,9 @@
 	left: 17vw;
 }
 
+.list-style-type-none{
+	list-style-type: none;
+}
 
 .padding-left-2vw{
 	padding-left: 2vw;
@@ -285,6 +288,7 @@ body{
 	width: 1.2vw;
 }
 
+/*LADO DERECHO DE LA NAVBAR*/
 .navbar-right{
 	width: 16vw;
 	display: flex;
@@ -295,7 +299,6 @@ body{
 
 .icon-video{
 	color: #030303;
-	/* margin-right: 10px; */
 }
 
 .notifications{
@@ -312,7 +315,6 @@ body{
 }
 
 .notifications-number{
-/* .notifications div{ */
 	height: 1.2vw;
 	width: 1.6vw;
 	background: #c00;
@@ -332,7 +334,6 @@ body{
 .picture-user{
 	background: white;
 	overflow: hidden;
-	/* margin-left: 10px; */
 }
 
 .user-profile{
@@ -344,23 +345,82 @@ body{
 
 /* MENU DE NOTIFICACIONES */
 .desktop-notifications{
-	width: 54vw;
-	height: 10vh;
-	position: relative;
-	top: 0;
-	right: 10vw;
+	width: 35vw;
+	height: 98vh;
+	position: absolute;
+	top: 0.7vw;
+	right: 12vw;
 	/*blanco con transparencia*/
 	/*rgba(rojo, verde, azul, transparencia); */
 	background: rgba(255, 255, 255, 0.98); 
-	border: 1px solid var(--borders-color);
+	border-left: 1px solid var(--borders-color);
+	border-right: 1px solid var(--borders-color);
 	overflow: hidden;
 }
 
 .header-desktop-notifications{
-	
+	height: 7.4vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--borders-color);
 }
 
-.body-desktop-notifications img{
+.header-desktop-notifications h2{
+	font-size: 1.4vw;
+	font-weight: 400;
+	padding-left: 1vw;
+}
+
+.header-desktop-notifications div{
+	margin-right: 1vw;
+}
+
+.body-desktop-notifications{
+	height: 91vh;
+}
+
+.menu-ul{
+	padding-left: 0vw;
+}
+
+.menu-ul li{
+	height: 8vw;
+	padding: 1vw 0;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 1vw;
+}
+
+.menu-ul li:hover{
+	background: var(--hover-background);
+}
+
+.menu-ul li div:nth-child(1){
+	margin-left: 1vw;
+}
+
+.title-notification{
+	width: 18vw;
+}
+
+.title-notification p{
+	font-size: 1vw;
+	font-weight: 400;
+	margin: 0;
+	text-align: justify;
+}
+
+.title-notification p:nth-child(2){
+	font-size: 0.9vw;
+	font-weight: 300;
+	margin-top: 1vw;
+	color: #606060;
+}
+
+.notifications-image img{
 	width: 7vw;
 	height: 9vh;
 	object-fit: cover;
@@ -372,9 +432,6 @@ body{
 	top: 4vw;
 	font-weight: 300;
 	position: fixed;
-	/*transition-duration: 0ms;
-    touch-action: pan-y;*/
-	
 }
 
 
