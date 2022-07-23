@@ -7,6 +7,9 @@ const iconNextButtonsBar = document.getElementById('iconNextButtonsBar');
 const leftArrowButtonsBar = document.querySelector('.left-arrow-buttons-bar');
 const buttonsContainer = document.querySelector('.buttons-container');
 const buttonNotifications = document.querySelector('.notifications');
+const desktopNotifications = document.querySelector('.desktop-notifications');
+const notificationsNumber = document.querySelector('.notifications-number');
+const dotMenu = document.querySelector('.dot-menu');
 
 
 // Eventos del input
@@ -200,18 +203,23 @@ iconPreviousButtonsBar.addEventListener('click', function(){
 
 
 // Mostrar las notificaciones
-buttonNotifications.addEventListener('click', function(){
-	const desktopNotifications = document.querySelector('.desktop-notifications');
-	const notificationsNumber = document.querySelector('.notifications-number');
-	
+buttonNotifications.addEventListener('click', function(){	
 	desktopNotifications.classList.toggle('hide');
 	notificationsNumber.classList.toggle('hide');
 });
 
-//Al dar click en cualquier parte de la pagina 
-	//evaluar si estan abiertas las notificaciones
-		//Si estan abiertas Cerrarlas
-document.addEventListener("click", function(){
+window.addEventListener('click', function(e){
 	
-});
-
+	// Validamos se esta haciendo click fuera de las notificaciones
+	if (!desktopNotifications.contains(e.target)){
+		// Validamos q NO se este haciendo click sobre el icono de notificaciones
+		if (!buttonNotifications.contains(e.target)){
+			// Validamos que las notificaciones NO contienen la clase q las oculta
+			if (!desktopNotifications.classList.contains('hide')){
+				desktopNotifications.classList.toggle('hide');
+				notificationsNumber.classList.toggle('hide');
+			}
+		}
+	} 
+	
+})
