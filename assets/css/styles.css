@@ -587,12 +587,16 @@ body{
 	right: 17vw;
 }
 
-.buttons-container button{
+.buttons-container .button{
 	height: 2.4vw;
 	min-width: 5vw;
 	font-weight: 400;
 	font-size: 1vw;
-	border-radius: 255px;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--hover-background);
 	border: 1px solid var(--active-background);
 }
 
@@ -600,11 +604,11 @@ body{
 	padding: 0 0.5vw;
 }
 
-.buttons-container button:hover{
+.buttons-container .button:hover{
 	background: var(--active-background);
 }
 
-.buttons-container button:nth-child(1){
+.buttons-container .button:nth-child(1){
 	background:  #030303;
 	border: 1px solid  #030303;
 	color: white;
@@ -768,16 +772,18 @@ body{
 	/*BARRA DE BOTONES*/
 	.buttons-bar{
 		height: 6vh;
-		width: 111%;
+		width: 100%;
 		top: 11vw;
+		/* overflow: scroll; */
+		overflow-x: scroll;
 	}
 
 	.left-17{
 		left: 0;
 	}
 
-	.explore{
-		width: 32vw;
+	.explore-mobile{
+		min-width: 24vw;
 		height: 5vh;
 		display: flex;
 		align-items: center;
@@ -786,9 +792,9 @@ body{
 		border-right: 1px solid var(--borders-color);
 	}
 
-	.explore div{
+	.explore-mobile div{
 		height: 50%;
-		width: 70%;
+		width: 68%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -797,8 +803,34 @@ body{
 		background: var(--hover-background);
 	}
 
-	.explore div p{
+	.explore-mobile div p{
 		font-weight: 400;
+	}
+
+	.icon-explore-mobile{
+		height: 4vw;
+		width: 4vw;
+	}
+
+	.buttons-container{
+		height: 7vw;
+		gap: 1vw;
+	}
+
+	.buttons-container .button{
+		height: 4vw;
+		min-width: 12vw;
+		box-sizing: border-box;
+	}
+
+	.button span{
+		width: 90%;
+		max-width: 10vw;
+		overflow: hidden;
+		white-space: nowrap;
+		letter-spacing: 0px;
+		text-overflow: ellipsis;
+		font-size: 2.1vw;
 	}
 }
 
