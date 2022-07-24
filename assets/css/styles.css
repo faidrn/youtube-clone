@@ -538,7 +538,6 @@ body{
 .left-and-right-arrows{
 	height: 100%;
     width: 8vw;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -546,15 +545,11 @@ body{
 .left-arrow-buttons-bar{
 	position: relative;
 	transform: rotate(180deg);
-	/* degradado */
-	/*background: linear-gradient(-90deg, white 70%, transparent);*/
 }
 
 .right-arrow-buttons-bar{
 	position: relative;
 	right: 17vw;
-	/* degradado */
-	/*background: linear-gradient(-90deg, white 70%, transparent);*/
 }
 
 .linear-gradient{
@@ -563,11 +558,9 @@ body{
 }
 
 .buttons-container{
-	/*width: 100%;*/
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	/*justify-content: space-between;*/
 	gap: 0.5vw;
 }
 
@@ -614,6 +607,38 @@ body{
 	color: white;
 }
 
+.main{
+	width: 83vw;
+	height: 100vh;
+	position: absolute;
+	right: 0;
+	background: var(--hover-background);
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+}
+
+.main div{
+	width: 15vw;
+	height: 10vw;
+	border: 1px solid;
+}
+
+.preview-video{
+	width: 15vw;
+	height: 5vw;
+}
+
+.preview-video img{
+	width: 15vw;
+	height: 5vw;
+	object-fit: cover;
+}
+
+
+
+
 @media screen and (max-width: 1366px) {
 	.button-search{
 		height: 2.7vw;
@@ -648,6 +673,7 @@ body{
 	.nav-bar{
 		height: 8vh;
 		padding: 0 5vw;
+		box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 	}
 
 	.youtube-logo {
@@ -678,6 +704,10 @@ body{
 
 	.mobile-navbar{
 		width: 157vw;
+		background: #f1f1f1;
+	}
+
+	.background-mobile-header{
 		background: #f1f1f1;
 	}
 
@@ -774,7 +804,6 @@ body{
 		height: 6vh;
 		width: 100%;
 		top: 11vw;
-		/* overflow: scroll; */
 		overflow-x: scroll;
 	}
 
@@ -788,7 +817,6 @@ body{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		/* background: white; */
 		border-right: 1px solid var(--borders-color);
 	}
 
@@ -808,7 +836,7 @@ body{
 	}
 
 	.icon-explore-mobile{
-		height: 4vw;
+		height: 3.7vw;
 		width: 4vw;
 	}
 
@@ -836,7 +864,49 @@ body{
 
 @media screen and (max-width: 768px) {
 	/* ipad 768x1024 50% */
-	.button-search{
-		/* height: 3.5vw; */
+	
+}
+
+@media screen and (max-width: 280px) {
+	/* galaxy fold 280x653 87% */
+
+	.label-icon{
+		font-size: 4vw;
+	}
+
+	/*BARRA DE BOTONES*/
+	.buttons-bar{
+		height: 5vh;
+		top: 19vw;
+	}
+
+	.explore-mobile{
+		min-width: 28vw;
+	}
+
+	.explore-mobile div{
+		height: 51%;
+		width: 76%;
+	}
+
+	.icon-explore-mobile{
+		height: 5vw;
+		width: 5vw;
+	}
+
+	.buttons-container{
+		height: 8vw;
+		gap: 2vw;
+	}
+
+	.buttons-container .button{
+		height: 7vw;
+		min-width: 20vw;
+	}
+
+	.button span{
+		width: 90%;
+		max-width: 18vw;
+		font-size: 4vw;
 	}
 }

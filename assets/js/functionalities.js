@@ -223,3 +223,45 @@ window.addEventListener('click', function(e){
 	} 
 	
 })
+
+
+/* MOBILE */
+const mobileButtonSearch = document.querySelector('.mobile-button-search');
+const mobileNavbar = document.querySelector('.mobile-navbar');
+const header = document.querySelector('.header');
+const pictureUser = document.querySelector('.picture-user');
+const navbarLeft = document.querySelector('.navbar-left');
+const mobileIconClearSearch = document.querySelector('.mobile-icon-clear-search');
+const inputSearchMobile = document.querySelector('.input-search-mobile');
+const iconArrowBack = document.querySelector('.icon-arrow-back');
+const iconClearMobile = document.getElementById('iconClearMobile');
+
+mobileButtonSearch.addEventListener('click', function(){
+	//Quitar de la barra de busqueda mobile la clase q la oculta en desktop
+	mobileNavbar.classList.remove('hide');
+	header.classList.add('background-mobile-header');
+	pictureUser.classList.add('hide');
+	navbarLeft.classList.add('mobile-hidden');
+});
+
+inputSearchMobile.addEventListener('keyup', function(){
+	if (inputSearchMobile.value != ""){
+		mobileIconClearSearch.classList.remove('hide');
+	} else{
+		mobileIconClearSearch.classList.add('hide');
+	}
+});
+
+iconArrowBack.addEventListener('click', function(){
+	//Deshacer lo hecho con el click en mobileButtonSearch
+	//Quitar de la barra de busqueda mobile la clase q la oculta en desktop
+	mobileNavbar.classList.add('hide');
+	header.classList.remove('background-mobile-header');
+	pictureUser.classList.remove('hide');
+	navbarLeft.classList.remove('mobile-hidden');
+});
+
+iconClearMobile.addEventListener('click', function(){
+	inputSearchMobile.value = "";
+	mobileIconClearSearch.classList.add('hide');
+});
