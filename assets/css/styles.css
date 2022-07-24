@@ -612,29 +612,92 @@ body{
 	height: 100vh;
 	position: absolute;
 	right: 0;
+	top: 17vh;
 	background: var(--hover-background);
-	display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
-    gap: 26px;
-    place-content: center;
+	overflow: hidden;
 }
 
-.main div{
-	width: 15vw;
-	height: 10vw;
+.previews-container{
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 19.6vw);
+    gap: 2px;
+    place-content: center;
+	margin-top: 2vw;
+	overflow-y: scroll;
+}
+
+.video-information{
+	width: 18vw;
+	height: 20vw;
+	margin-top: 0;
+	margin-bottom: 4vw;
 	border: 1px solid;
 }
 
 .preview-video{
-	width: 15vw;
-	height: 5vw;
+	width: 18vw;
+	height: 12vw;
 }
 
 .preview-video img{
-	width: 15vw;
-	height: 5vw;
+	width: 18vw;
+	height: 12vw;
 	object-fit: cover;
 }
+
+.video-datas{
+	position: relative;
+	font-size: 1vw;
+	text-align: center;
+	background: #000;
+	color: white;
+}
+
+.time{
+	width: 2vw;
+	top: -3.3vw;
+	right: -15.1vw;
+	padding: 0.2vw;
+}
+
+.tooltip{
+	width: 16.1vw;
+	right: -1vw;
+	top: -5.8vw;
+	padding: 0.3vw;
+	font-weight: 300;
+	display: none;
+}
+
+.preview-video:hover > .tooltip{
+	display: block;
+}
+
+.video-information .picture-user{
+	margin-top: 1vw;
+}
+
+.about-videos{
+	width: 14vw;
+	height: 15vh;
+	position: absolute;
+	top: 14vw;
+	left: 6vw;
+	border: 1px solid red;
+}
+
+.about-videos h5{
+	margin-top: 1vw;
+	font-weight: 400;
+	text-overflow: ellipsis;
+}
+
+.about-videos p:nth-child(1){
+	font-size: 1vw;
+	font-weight: 100;
+	color: blue;
+}
+
 
 
 

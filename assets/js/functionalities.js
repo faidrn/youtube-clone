@@ -225,6 +225,7 @@ window.addEventListener('click', function(e){
 })
 
 
+
 /* MOBILE */
 const mobileButtonSearch = document.querySelector('.mobile-button-search');
 const mobileNavbar = document.querySelector('.mobile-navbar');
