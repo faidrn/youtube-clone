@@ -78,10 +78,14 @@ function lateralMenu(){
 	const flexDirectionColumn = document.querySelectorAll('.flex-direction-column');
 	const buttonsBar = document.querySelector('.buttons-bar');
 	const rightArrowButtonsBar = document.querySelector('.right-arrow-buttons-bar');
+	const main = document.querySelector('.main');
 	
 	//Agregar o quitar el scroll
 	menu.classList.toggle('scroll-y');
 	
+	// Ajustar el main al ancho de la ventana
+	main.classList.toggle('width-main');
+
 	if (flag == 0){
 		// Cambiar el ancho del menu (reducir)
 		menu.classList.remove('lateral-menu-expanded', 'font-size-1vw');

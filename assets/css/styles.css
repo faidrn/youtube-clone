@@ -607,14 +607,18 @@ body{
 	color: white;
 }
 
+
+/* AREA PRINCIPAL - PREVIEWS VIDEOS */
 .main{
 	width: 83vw;
-	height: 100vh;
 	position: absolute;
 	right: 0;
 	top: 17vh;
 	background: var(--hover-background);
-	overflow: hidden;
+}
+
+.width-main{
+	width: 94vw;
 }
 
 .previews-container{
@@ -628,10 +632,9 @@ body{
 
 .video-information{
 	width: 18vw;
-	height: 20vw;
+	height: 21vw;
 	margin-top: 0;
 	margin-bottom: 4vw;
-	border: 1px solid;
 }
 
 .preview-video{
@@ -679,23 +682,48 @@ body{
 
 .about-videos{
 	width: 14vw;
-	height: 15vh;
-	position: absolute;
-	top: 14vw;
-	left: 6vw;
-	border: 1px solid red;
+	height: 17vh;
+	margin-top: -4vw;
+	margin-left: 4vw;
 }
 
+/* line-clamp= corta un texto que se sale de su contenedor, agregando puntos suspensivos al final
+para aplicarla es necesario agregar las propiedades "display: -webkit-box;", "-webkit-line-clamp: Numero de lineas del texto;", 
+"-webkit-box-orient: vertical; ", junto con "overflow:hidden;".
+
+Es importante tener en cuenta que line-clamp por defecto se aplica en la primer linea de texto, por esta razón, 
+si se quiere tener mas de una linea de texto es necesario aplicar las propiedades mencionadas en el parrafo anterior
+ */
 .about-videos h5{
 	margin-top: 1vw;
 	font-weight: 400;
+	line-height: 1.4vw;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical; 
+	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
-.about-videos p:nth-child(1){
+.channel-data{
 	font-size: 1vw;
-	font-weight: 100;
-	color: blue;
+	font-weight: 300;
+	color: #606060;
+}
+
+.channel{
+	margin-top: -1vw;
+}
+
+.views-channel{
+	margin-top: -0.6vw;
+}
+
+.separator{
+	font-size: 1.4vw;
+	font-weight: 400;
+	position: relative;
+	top: 0.2vw;
 }
 
 
@@ -816,52 +844,6 @@ body{
 		width: 100%;
 	}
 
-	.footer-mobile{
-		height: 8vh;
-		width: 100%;
-		z-index: 1;
-		position: absolute;
-		bottom: 0px;
-		border-top: 1px solid var(--borders-color);
-	}
-	
-	.navbar-footer{
-		height: 8vh;
-		width: 70%;
-		padding: 0 15vw;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	
-	.icons-footer{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	
-	.icons-footer img{
-		height: 5vw;
-		width: 5vw;
-	}
-	
-	.label-icon{
-		font-size: 2.9vw;
-		font-weight: 100;
-	}
-	
-	.icon-shorts{
-		height: 5vw;
-		width: 5vw;
-		top: 2vw;
-	}
-	
-	.position-label{
-		position: absolute;
-		bottom: 1vw;
-	}
-
 	/*BARRA DE BOTONES*/
 	.buttons-bar{
 		height: 6vh;
@@ -923,11 +905,261 @@ body{
 		text-overflow: ellipsis;
 		font-size: 2.1vw;
 	}
+
+	/* AREA PRINCIPAL - PREVIEWS VIDEOS */
+	.main{
+		width: 100vw;
+		left: 0;
+		top: 14vh;
+		background: none;
+	}
+
+	.previews-container{
+		grid-template-columns: repeat(auto-fill, 28vw);
+	}
+
+	.video-information{
+		width: 25vw;
+		height: 32vw;
+		margin-bottom: 3vw;
+	}
+
+	.preview-video{
+		width: 25vw;
+		height: 14vw;
+	}
+
+	.preview-video img{
+		width: 25vw;
+		height: 14vw;
+	}
+
+	.video-datas{
+		font-size: 2vw;
+	}
+
+	.time{
+		width: 4vw;
+		top: -5.3vw;
+		right: -20.1vw;
+	}
+
+	.circles-mobile{
+		width: 6vw;
+		height: 6vw;
+	}
+
+	.about-videos{
+		width: 18vw;
+		height: 11vh;
+		margin-top: -7vw;
+		margin-left: 7vw;
+	}
+
+	.about-videos h5{
+		line-height: 2vw;
+		font-size: 2vw;
+	}
+
+	.channel-data{
+		font-size: 2vw;
+	}
+
+	.channel{
+		margin-top: -2vw;
+	}
+
+	.views-channel{
+		margin-top: -1.5vw;
+	}
+
+	.separator{
+		font-size: 2vw;
+	}
+
+	/* FOOTER MOBILE */
+	.footer-mobile{
+		height: 8vh;
+		width: 100%;
+		z-index: 1;
+		position: fixed;
+		bottom: 0px;
+		border-top: 1px solid var(--borders-color);
+		background: white;
+	}
+	
+	.navbar-footer{
+		height: 8vh;
+		width: 70%;
+		padding: 0 15vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	.icons-footer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.icons-footer img{
+		height: 5vw;
+		width: 5vw;
+	}
+	
+	.label-icon{
+		font-size: 2.9vw;
+		font-weight: 100;
+	}
+	
+	.icon-shorts{
+		height: 5vw;
+		width: 5vw;
+		top: 2vw;
+	}
+	
+	.position-label{
+		position: absolute;
+		bottom: 1vw;
+	}
 }
 
-@media screen and (max-width: 768px) {
-	/* ipad 768x1024 50% */
+@media screen and (max-width: 720px) {
+	/* redmi note 9c 720x1600 35% */
 	
+	
+	/*BARRA DE BOTONES*/
+	.buttons-bar{
+		height: 4vh;
+		top: 19vw;
+	}
+/*
+	.left-17{
+		left: 0;
+	}
+
+	.explore-mobile{
+		min-width: 24vw;
+		height: 5vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-right: 1px solid var(--borders-color);
+	}
+
+	.explore-mobile div{
+		height: 50%;
+		width: 68%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1vw 2vw;
+		background: var(--hover-background);
+	}
+
+	.explore-mobile div p{
+		font-weight: 400;
+	}
+
+	.icon-explore-mobile{
+		height: 3.7vw;
+		width: 4vw;
+	}
+
+	.buttons-container{
+		height: 7vw;
+		gap: 1vw;
+	}
+
+	.buttons-container .button{
+		height: 4vw;
+		min-width: 12vw;
+		box-sizing: border-box;
+	}
+
+	.button span{
+		width: 90%;
+		max-width: 10vw;
+		overflow: hidden;
+		white-space: nowrap;
+		letter-spacing: 0px;
+		text-overflow: ellipsis;
+		font-size: 2.1vw;
+	}
+
+	/* AREA PRINCIPAL - PREVIEWS VIDEOS */
+	.main{
+		width: 100vw;
+		left: 0;
+		top: 14vh;
+		background: none;
+	}
+
+	.previews-container{
+		grid-template-columns: repeat(auto-fill, 28vw);
+	}
+
+	.video-information{
+		width: 25vw;
+		height: 32vw;
+		margin-bottom: 3vw;
+	}
+
+	.preview-video{
+		width: 25vw;
+		height: 14vw;
+	}
+
+	.preview-video img{
+		width: 25vw;
+		height: 14vw;
+	}
+
+	.video-datas{
+		font-size: 2vw;
+	}
+
+	.time{
+		width: 4vw;
+		top: -5.3vw;
+		right: -20.1vw;
+	}
+
+	.circles-mobile{
+		width: 6vw;
+		height: 6vw;
+	}
+
+	.about-videos{
+		width: 18vw;
+		height: 11vh;
+		margin-top: -7vw;
+		margin-left: 7vw;
+	}
+
+	.about-videos h5{
+		line-height: 2vw;
+		font-size: 2vw;
+	}
+
+	.channel-data{
+		font-size: 2vw;
+	}
+
+	.channel{
+		margin-top: -2vw;
+	}
+
+	.views-channel{
+		margin-top: -1.5vw;
+	}
+
+	.separator{
+		font-size: 2vw;
+	}*/
 }
 
 @media screen and (max-width: 280px) {
