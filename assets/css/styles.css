@@ -1029,137 +1029,107 @@ si se quiere tener mas de una linea de texto es necesario aplicar las propiedade
 @media screen and (max-width: 720px) {
 	/* redmi note 9c 720x1600 35% */
 	
-	
 	/*BARRA DE BOTONES*/
 	.buttons-bar{
-		height: 4vh;
-		top: 19vw;
-	}
-/*
-	.left-17{
-		left: 0;
+		height: 5vh;
+		top: 18vw;
 	}
 
 	.explore-mobile{
-		min-width: 24vw;
-		height: 5vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-right: 1px solid var(--borders-color);
+		min-width: 29vw;
+		height: 6vh;
 	}
 
 	.explore-mobile div{
-		height: 50%;
-		width: 68%;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding: 1vw 2vw;
-		background: var(--hover-background);
-	}
-
-	.explore-mobile div p{
-		font-weight: 400;
+		width: 78%;
 	}
 
 	.icon-explore-mobile{
-		height: 3.7vw;
-		width: 4vw;
+		height: 7vw;
+		width: 6vw;
+	}
+
+	.label-icon{
+		font-size: 4vw;
 	}
 
 	.buttons-container{
-		height: 7vw;
-		gap: 1vw;
+		height: 9vw;
 	}
 
 	.buttons-container .button{
-		height: 4vw;
-		min-width: 12vw;
-		box-sizing: border-box;
+		height: 7vw;
+		min-width: 19vw;
 	}
 
 	.button span{
-		width: 90%;
-		max-width: 10vw;
-		overflow: hidden;
-		white-space: nowrap;
-		letter-spacing: 0px;
-		text-overflow: ellipsis;
-		font-size: 2.1vw;
+		width: 100%;
+		max-width: 16vw;
+		font-size: 4vw;
 	}
 
 	/* AREA PRINCIPAL - PREVIEWS VIDEOS */
-	.main{
-		width: 100vw;
-		left: 0;
-		top: 14vh;
-		background: none;
-	}
-
 	.previews-container{
-		grid-template-columns: repeat(auto-fill, 28vw);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.video-information{
-		width: 25vw;
-		height: 32vw;
-		margin-bottom: 3vw;
+		width: 72vw;
+		height: 55vw;
+		margin-bottom: 7vw;
 	}
 
 	.preview-video{
-		width: 25vw;
-		height: 14vw;
+		width: 72vw;
+		height: 30vw;
 	}
 
 	.preview-video img{
-		width: 25vw;
-		height: 14vw;
+		width: 72vw;
+		height: 30vw;
 	}
 
 	.video-datas{
-		font-size: 2vw;
+		font-size: 4vw;
 	}
 
 	.time{
-		width: 4vw;
-		top: -5.3vw;
-		right: -20.1vw;
+		width: 9vw;
+		top: -10.3vw;
+		right: -61.1vw;
 	}
 
 	.circles-mobile{
-		width: 6vw;
-		height: 6vw;
+		width: 10vw;
+		height: 10vw;
 	}
 
 	.about-videos{
-		width: 18vw;
-		height: 11vh;
-		margin-top: -7vw;
-		margin-left: 7vw;
+		width: 60vw;
+		/* height: 11vh; */
+		margin-top: -10vw;
+		margin-left: 12vw;
 	}
 
 	.about-videos h5{
-		line-height: 2vw;
-		font-size: 2vw;
+		line-height: 4vw;
+		font-size: 4vw;
 	}
 
 	.channel-data{
-		font-size: 2vw;
+		font-size: 3.4vw;
 	}
 
 	.channel{
-		margin-top: -2vw;
-	}
-
-	.views-channel{
-		margin-top: -1.5vw;
+		margin-top: -4vw;
 	}
 
 	.separator{
-		font-size: 2vw;
-	}*/
+		font-size: 4vw;
+	}
 }
 
 @media screen and (max-width: 280px) {
